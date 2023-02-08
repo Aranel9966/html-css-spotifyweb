@@ -9,7 +9,7 @@ html{
 }
 
 .display{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -17,12 +17,15 @@ html{
 
 .top-display{
     display: flex;
-    height: 90vh;
+    height: calc(100% - 100px);
+    width: 100%;
 }
 
 .bottom-display{
     /* display:flex ; */
-    height: 10vh;
+    height: 100px;
+    width: 100%;
+
 }
 
 
@@ -32,7 +35,7 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
+    width: 200px;
     background-color: black;
     padding: 20px;
     color: #6d6d6d;
@@ -82,7 +85,7 @@ header>div{
 /* player bar*/
 
 .player-bar{
-    height: 10vh;
+    height: 100px;
     background-color: #282828;
     display: flex;
     justify-content: space-between;
@@ -101,15 +104,18 @@ header>div{
 main{
     display: flex;
     flex-direction: column;
-    width: 89vw;
-    height: 90vh;
+    width: calc(100% - 200px);
+    color: white;
     background-color: red;
+    overflow: auto;
 }
 
 .top-main{
     width: 100%;
     height: 50px;
     background-color: #080b12;
+    /* display: flex;
+    justify-content: end; */
 }
 
 .nav-main ul{
@@ -124,12 +130,22 @@ main{
 .row{
     display: flex;
     gap: 20px;
-
-    padding: 20px;
+    /* justify-content: space-between; */
+    padding: 30px;
 }
 
 .card{
     width: calc(100% / 6 - (20px / 5));
-    height: 100px;
-    background-color: aquamarine;
+    text-align: center;
+    
+}
+.card img{
+    width: 100%;
+    
+    
+}
+
+.radius img{
+    width: 100%;
+    border-radius: 50%;
 }
