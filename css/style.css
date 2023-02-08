@@ -8,6 +8,7 @@ html{
     font-family: 'Open Sans', sans-serif;
 }
 
+/* screen */
 .display{
     width: 100vw;
     height: 100vh;
@@ -22,14 +23,14 @@ html{
 }
 
 .bottom-display{
-    /* display:flex ; */
+    
     height: 100px;
     width: 100%;
 
 }
 
 
-
+/* header */
 
 header{
     display: flex;
@@ -39,16 +40,16 @@ header{
     background-color: black;
     padding: 20px;
     color: #6d6d6d;
-    /* max-width: 20vw;
-    height:90vh; */
+    
 }
 
 header div>img{
     width: 125px;
+    padding-bottom: 20px;
 }
 
 .menu{
-    /* height: calc(90vh / 3 - (65 / 3)); */
+    
     justify-content: flex-end;
     
 }
@@ -56,15 +57,15 @@ header div>img{
 .menu ul li img{
     width: 16px;
 }
+
 .menu p img,.menu h3 img{
     width: 16px;
 }
+
 .menu p{
     padding: 10px 0;
     
 }
-
-
 
 .fa-square-plus {
     font-size: xx-large;
@@ -80,8 +81,6 @@ header div>img{
     padding: 10px 0;
 }
 
-
-
 .menu li{
     display: flex;
     align-items: center;
@@ -95,10 +94,7 @@ header>div{
     display: flex;
     flex-direction: column;
     
-
 } 
-
-
 
 
 /* main */
@@ -140,14 +136,14 @@ main{
     list-style-type: none; 
 }
 
-main>h2,p{
+main>h2,main>p{
     padding-left: 30px;
 }
 
 .row{
     display: flex;
     gap: 20px;
-    /* justify-content: space-between; */
+    
     padding: 30px;
     
 }
@@ -173,7 +169,7 @@ p,h5{
 }
 
 
-/* player bar*/
+/* player bar  footer*/
 
 .player-bar{
     height: 100px;
@@ -182,11 +178,9 @@ p,h5{
     justify-content: space-between;
 }
 
-.player-center,.player-left,.player-right{
-    /* test */
+.player-center,.player-left,.player-right{    
     color: white;
-    /* width: 100px; */
-    
+
 }
 
 .player-left {
@@ -197,8 +191,13 @@ p,h5{
     padding: 20px 10px;
     gap: 10px;
 }
+
 .player-left img{
     height: 100%;
+}
+.player-left .icon{
+    display: flex;
+    gap: 10px;
 }
 
 .player-center{
@@ -230,6 +229,7 @@ p,h5{
     height: 4px;
     background-color: #6d6d6d;
 }
+
 .play-bar .bar .tim-line{
     width: 30%;
     height: 100%;
@@ -244,4 +244,29 @@ p,h5{
     gap: 20px;
     width: 200px;
     padding: 10px;
+}
+
+.player-right .tim-line{
+    width: 30%;
+    height: 100%;
+    background-color: white;
+}
+
+/* responsive */
+
+@media screen and (min-width:768px) and (max-width:992px) {
+
+
+
+    .nav-main ul{
+        flex-wrap: wrap;
+    }
+    .row{
+        flex-wrap: wrap;
+    }
+
+    .card{
+        width: calc(100% / 4 - (20px / 1))
+    }
+    
 }
