@@ -43,7 +43,11 @@ header{
     
 }
 
-header div>img{
+.logo-small{
+    display: none;
+}
+
+.logo>img{
     width: 125px;
     padding-bottom: 20px;
 }
@@ -205,7 +209,7 @@ p,h5{
     flex-direction: column;
     justify-content: center;
     gap: 20px;
-    width: 50%;
+    width: 35%;
     padding: 10px;
 }
 
@@ -241,7 +245,7 @@ p,h5{
     flex-direction: row;
     justify-content: start;
     align-items: center;
-    gap: 20px;
+    gap: 14px;
     width: 200px;
     padding: 10px;
 }
@@ -254,7 +258,7 @@ p,h5{
 
 /* responsive */
 
-@media screen and (min-width:768px) and (max-width:992px) {
+@media screen and (max-width:992px) {
 
 
 
@@ -269,4 +273,65 @@ p,h5{
         width: calc(100% / 4 - (20px / 1))
     }
     
+}
+
+@media screen and (max-width:768px){
+    .card{
+        width: calc(100% / 2 - (20px / 1))
+    }
+
+}
+
+@media screen and (max-width:620px){
+    
+    header{
+        width: 60px;
+    }
+
+    
+    header>.menu{
+        display: flex;
+    }
+    header>.menu span,hr{
+        display: none;
+    }
+
+    main{
+        
+    width: calc(100% - 40px);
+
+    }
+
+    .menu,li span,.logo {
+        display: none;
+    }
+    
+    
+    .player-left img {
+        width: 25px;
+        height: auto;
+    }
+    .player-left .icon {
+       flex-direction: column;
+       padding-right: 10px;
+    }
+    .player-left .play-text {
+       font-size: x-small;
+    }
+
+    .menu:first-of-type{
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: center;
+    }
+    
+    .logo-small{
+        display: block;
+        width: 20px;
+
+    }
+
+    .player-center .icon {
+        gap: 15px;
+    }
 }
