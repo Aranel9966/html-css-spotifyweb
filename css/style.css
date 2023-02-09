@@ -147,21 +147,39 @@ main>h2,main>p{
 .row{
     display: flex;
     gap: 20px;
-    
     padding: 30px;
     
 }
 
 .card{
-    width: calc(100% / 6 - (20px / 5));
+    width: calc(100% / 6 - (20px / 6 *5));
     text-align: center;
     
     
 }
+
 .card img{
     width: 100%;
     
- 
+}
+
+.play-hover .fa-regular.fa-circle-play{
+    
+    font-size: 3rem;
+    position: absolute;
+    transform: translate(-50% ,-50%);
+    display: none;
+
+}
+
+.card-img{
+    position: relative;
+}
+
+.play-hover{
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
 }
 
 .radius img{
@@ -188,6 +206,8 @@ p,h5{
 
 }
 
+/* .player-left */
+
 .player-left {
     height: 100%;
     display: flex;
@@ -200,10 +220,14 @@ p,h5{
 .player-left img{
     height: 100%;
 }
+
 .player-left .icon{
+    color: gray;
     display: flex;
     gap: 10px;
 }
+
+/* player-center */
 
 .player-center{
     display: flex;
@@ -249,7 +273,11 @@ p,h5{
     background-color: white;
 }
 
+.fa-circle-play{
+    font-size:xx-large;
+}
 
+/* .player-right */
 
 .player-right{
     display: flex;
@@ -272,29 +300,7 @@ p,h5{
     background-color: white;
 }
 
-.fa-circle-play{
-    font-size: x-large;
-}
 
-
-.play-hover .fa-regular.fa-circle-play{
-    
-    font-size: 3rem;
-    position: absolute;
-    transform: translate(-50% ,-50%);
-    display: none;
-
-}
-
-.card-img{
-    position: relative;
-}
-
-.play-hover{
-    position: absolute;
-    bottom: 50%;
-    left: 50%;
-}
 
 .cursor{
     display: none;
@@ -305,38 +311,50 @@ p,h5{
 
 /* hover */
 
+
 .menu li:hover,.menu span:hover{
     color: white;
+    cursor: pointer;
 }
 
 .nav-main li:hover{
     color: white;
+    cursor: pointer;
 }
 
 .btn-primary:hover{
     transform: scale(1.4);
-
+    cursor: pointer;
 }
 
 .card img:hover {
     opacity:30% ;
-    
+    cursor: pointer;
 }
 .card:hover .fa-regular.fa-circle-play{
     display: block;
-
+    cursor: pointer;
 }
 
 .fa-circle-play:hover{
-    transform: scale(1.0);
+    transform: scale(1.5);
+    cursor: pointer;
 }
 
 .bar .tim-line:hover{
     background-color: greenyellow;
+    cursor: pointer;
 }
 
 .bar .tim-line:hover .cursor{
     display: flex;
+    cursor: pointer;
+}
+
+.player-left .icon i:hover{
+    cursor: pointer;
+
+    color: white;
 }
 
 /* responsive */
@@ -353,14 +371,15 @@ p,h5{
     }
 
     .card{
-        width: calc(100% / 4 - (20px / 1))
+       
+        width: calc(100% / 4 - (20px / 4 * 3 ));
     }
     
 }
 
 @media screen and (max-width:768px){
     .card{
-        width: calc(100% / 2 - (20px / 1))
+        width: calc(100% / 2 - (20px / 2))
     }
 
 }
@@ -371,10 +390,10 @@ p,h5{
         width: 60px;
     }
 
-    
     header>.menu{
         display: flex;
     }
+
     header>.menu span,hr{
         display: none;
     }
@@ -389,22 +408,23 @@ p,h5{
         display: none;
     }
     
-    
     .player-left img {
         width: 25px;
         height: auto;
     }
+
     .player-left .icon {
        flex-direction: column;
        padding-right: 10px;
     }
+
     .player-left .play-text {
        font-size: x-small;
     }
 
     .menu:first-of-type{
         display: flex;
-        /* flex-direction: column; */
+        
         justify-content: center;
     }
     
