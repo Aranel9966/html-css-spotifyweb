@@ -286,10 +286,22 @@ p,h5{
     width: 30%;
     height: 100%;
     background-color: white;
+
+    position: relative;
+  animation-name: animation;
+  animation-duration: 100s;
+  animation-iteration-count: infinite;
 }
 
 .fa-circle-play{
     font-size:xx-large;
+}
+
+@keyframes animation {
+    0%   {width: 0%;}
+    50%  {width: 50%;}
+    100% {width: 100%;}
+
 }
 
 /* .player-right */
@@ -308,12 +320,13 @@ p,h5{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-
     border-radius: 2px;
-    width: 30%;
     height: 100%;
     background-color: white;
 }
+
+
+
 
 .cursor{
     display: none;
