@@ -99,6 +99,12 @@ header>div{
     flex-direction: column;
     
 } 
+.menu h3 img{
+    background-color: gray;
+    border-radius: 50%;
+    padding: 0px;
+    width: 18px;
+}
 
 /* main */
 
@@ -134,7 +140,8 @@ main{
 }
 
 .nav-main{
-    margin-top: 100px;
+    margin-top: 80px;
+    margin-bottom: 20px;
 }
 
 .nav-main ul{
@@ -415,7 +422,7 @@ p,h5{
 }
 
 @media screen and (max-width:768px){
-    
+
     .card{
         width: calc(100% / 2 - (20px / 2))
     }
